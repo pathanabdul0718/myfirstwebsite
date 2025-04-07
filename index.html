@@ -67,6 +67,39 @@
     .links i {
       margin-right: 8px;
     }
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .slider-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -114,7 +147,17 @@
 
   <div class="container" id="gallery">
     <h2>Gallery</h2>
-    <img src="IMG_4860[1].jpg" alt="Gallery Photo 1" class="profile-pic">
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="https://picsum.photos/800/400?random=1" alt="Slide 1">
+        <img src="https://picsum.photos/800/400?random=2" alt="Slide 2">
+        <img src="https://picsum.photos/800/400?random=3" alt="Slide 3">
+      </div>
+      <div class="slider-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
   </div>
 
   <div class="container" id="contact">
@@ -127,6 +170,30 @@
   <footer>
     <p>&copy; 2025 Abdul. Designed with love.</p>
   </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+
+    function showSlide(index) {
+      const totalSlides = slides.children.length;
+      if (index >= totalSlides) currentSlide = 0;
+      else if (index < 0) currentSlide = totalSlides - 1;
+      else currentSlide = index;
+
+      slides.style.transform = translateX(-${currentSlide * 100}%);
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    setInterval(nextSlide, 4000); // Auto-slide every 4s
+  </script>
 
 </body>
 </html>

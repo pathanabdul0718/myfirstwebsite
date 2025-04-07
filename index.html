@@ -3,51 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul's Website</title>
+  <title>Abdul's Cool Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      text-align: center;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #e6e6e6);
+      color: #333;
+      scroll-behavior: smooth;
     }
     nav {
-      background-color: #007bff;
-      padding: 15px;
+      background-color: #111;
+      padding: 15px 0;
+      text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00bcd4;
     }
     .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      text-align: center;
     }
     img.profile-pic {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
     .links a {
-      display: block;
-      margin: 10px 0;
-      color: #007bff;
+      display: inline-block;
+      margin: 10px 15px;
+      color: #111;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .links a:hover {
+      transform: scale(1.1);
+      color: #007bff;
+    }
+    .links i {
+      margin-right: 8px;
     }
     footer {
-      margin-top: 20px;
+      text-align: center;
+      padding: 20px;
       font-size: 14px;
-      color: #777;
+      background: #111;
+      color: white;
+    }
+    @media(max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .links a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -66,9 +101,9 @@
     <p><strong>Name:</strong> Abdul</p>
 
     <div class="links">
-      <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Instagram</a>
-      <a href="https://wa.me/919016061182" target="_blank">WhatsApp</a>
-      <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">Snapchat</a>
+      <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://wa.me/919016061182" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank"><i class="fab fa-snapchat"></i>Snapchat</a>
     </div>
   </div>
 
@@ -80,18 +115,17 @@
   <div class="container" id="gallery">
     <h2>Gallery</h2>
     <img src="IMG_4860[1].jpg" alt="Gallery Photo 1" class="profile-pic">
-    <!-- Add more images here if you want -->
   </div>
 
   <div class="container" id="contact">
     <h2>Contact Abdul</h2>
-    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Follow me</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">@iam_abdul_0718</a></p>
     <p><strong>WhatsApp:</strong> <a href="https://wa.me/919016061182" target="_blank">+91 9016061182</a></p>
     <p><strong>Snapchat:</strong> <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">pathan_0718</a></p>
   </div>
 
   <footer>
-    <p>&copy; 2025 Abdul</p>
+    <p>&copy; 2025 Abdul. Designed with love.</p>
   </footer>
 
 </body>

@@ -1,163 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul's Personal Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdul's Website</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background-color: white;
-      color: black;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: black;
-      color: white;
-      padding: 20px;
       text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
+    h1 {
+      background-color: #222;
+      color: white;
+      margin: 0;
       padding: 20px;
     }
 
-    .profile-pic {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-      border: 3px solid black;
-    }
-
-    .links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background-color: black;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .links a:hover {
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-    }
-
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
+    .profile {
       margin-top: 30px;
     }
 
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 300%;
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #222;
     }
 
-    .slides img {
-      width: 100%;
-      height: auto;
-    }
-
-    .slider-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .slider-buttons button {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
+    .name {
+      margin-top: 10px;
       font-size: 20px;
+      font-weight: bold;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #f2f2f2;
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #000;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #444;
+    }
+
+    .slider {
       margin-top: 40px;
+    }
+
+    .slider img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
+  <h1>Welcome to Abdul's Website</h1>
 
-  <header>
-    <h1>Welcome to Abdul's Website</h1>
-  </header>
-
-  <div class="container">
-    <img src="17440472117136052375896199689091.jpg" alt="Abdul's Photo" class="profile-pic">
-
-    <h2 style="text-align: center;">Connect with Me</h2>
-    <div class="links" style="text-align: center;">
-      <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Instagram</a>
-      <a href="https://wa.me/919016061182" target="_blank">WhatsApp</a>
-      <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">Snapchat</a>
-    </div>
-
-    <div class="slider">
-      <div class="slides" id="slides">
-        <img src="https://source.unsplash.com/random/800x400?nature" alt="Slide 1">
-        <img src="https://source.unsplash.com/random/800x400?water" alt="Slide 2">
-        <img src="https://source.unsplash.com/random/800x400?forest" alt="Slide 3">
-      </div>
-      <div class="slider-buttons">
-        <button onclick="prevSlide()">&#10094;</button>
-        <button onclick="nextSlide()">&#10095;</button>
-      </div>
-    </div>
+  <div class="profile">
+    <img src="IMG_4860[1].jpg" alt="Abdul's Photo" />
+    <div class="name">Name: Abdul</div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Abdul's Website. All rights reserved.</p>
-  </footer>
+  <div class="buttons">
+    <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Instagram</a>
+    <a href="https://wa.me/919016061182" target="_blank">WhatsApp</a>
+    <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">Snapchat</a>
+  </div>
+
+  <div class="slider">
+    <img id="sliderImage" src="img1.jpg" alt="Slider Image" />
+  </div>
 
   <script>
-    let currentSlide = 0;
-    const slides = document.getElementById('slides');
+    const images = ['img1.jpg', 'img2.jpg', 'img3.jpg']; // Replace with your images
+    let index = 0;
 
-    function showSlide(index) {
-      const totalSlides = slides.children.length;
-      if (index >= totalSlides) currentSlide = 0;
-      else if (index < 0) currentSlide = totalSlides - 1;
-      else currentSlide = index;
-
-      slides.style.transform = translateX(-${currentSlide * 100}%);
-    }
-
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-
-    setInterval(nextSlide, 4000);
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById('sliderImage').src = images[index];
+    }, 3000);
   </script>
 </body>
 </html>

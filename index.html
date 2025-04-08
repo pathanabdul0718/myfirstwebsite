@@ -84,6 +84,67 @@
         margin: 10px 0;
       }
     }
+
+    .typewriter {
+      font-size: 32px;
+      font-weight: bold;
+      color: #000;
+      border-right: 2px solid #000;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background: #fff;
+      padding: 15px 25px;
+      border: 2px solid #000;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .buttons a:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -96,15 +157,14 @@
   </nav>
 
   <div class="container" id="home">
-    <h1>Welcome to Abdul's Page</h1>
+    <h1><span class="typewriter"></span></h1>
     <img src="IMG_4860[1].jpg" alt="Abdul's Photo" class="profile-pic">
     <p><strong>Name:</strong> Abdul</p>
-
-   <div class="buttons">
-  <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Instagram</a>
-  <a href="https://wa.me/919016061182" target="_blank">WhatsApp</a>
-  <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">Snapchat</a>
-</div>
+    <div class="buttons">
+      <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Instagram</a>
+      <a href="https://wa.me/919016061182" target="_blank">WhatsApp</a>
+      <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">Snapchat</a>
+    </div>
   </div>
 
   <div class="container" id="about">
@@ -127,6 +187,20 @@
   <footer>
     <p>&copy; 2025 Abdul. Designed with love.</p>
   </footer>
+
+  <script>
+    const txt = "Welcome to Abdul's Page";
+    let i = 0;
+    const speed = 100;
+    function typeWriter() {
+      if (i < txt.length) {
+        document.querySelector(".typewriter").textContent += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
 
 </body>
 </html>

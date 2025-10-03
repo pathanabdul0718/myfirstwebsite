@@ -1,230 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="author" content="Abdul Pathan">
-<meta name="description" content="Abdul Pathan's personal website — web developer, designer and more.">
-<meta name="keywords" content="Abdul Pathan, Abdul Web Developer, Pathan0718, Github Pages, Portfolio, Personal Website">
-<meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="vZPfHklsfzuYSSyBmss1lQuchU2gkgbyDUgYu2HxB04" />
-  <!-- Meta Tags for SEO -->
-<meta name="title" content="Abdul's Cool Website">
-<meta name="description" content="This is Abdul's personal website with links to his Instagram, WhatsApp, Snapchat, and more.">
-<meta name="keywords" content="Abdul, Abdul website, iam_abdul_0718, Snapchat Abdul, Instagram Abdul, Abdul Web Developer">
-<meta name="author" content="Abdul">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://pathan0718.github.io/myfirstwebsite/" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul's Cool Website</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Abdul Pathan | Links</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffffff, #e6e6e6);
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    nav {
-      background-color: #111;
-      padding: 15px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00bcd4;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    img.profile-pic {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
-    .links a {
-      display: inline-block;
-      margin: 10px 15px;
-      color: #111;
-      text-decoration: none;
-      font-size: 18px;
-      transition: transform 0.3s, color 0.3s;
-    }
-    .links a:hover {
-      transform: scale(1.1);
-      color: #007bff;
-    }
-    .links i {
-      margin-right: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      background: #111;
-      color: white;
-    }
-    @media(max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 20px;
-      }
-      .links a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-
-    .typewriter {
-      font-size: 32px;
-      font-weight: bold;
-      color: #000;
-      border-right: 2px solid #000;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
+    /* Reset */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
 
     body {
-      background-color: lightblue;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      font-size: 18px;
-      color: #555;
-    }
-    .buttons {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      background: #fff;
-      padding: 15px 25px;
-      border: 2px solid #000;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-
-    .buttons a:hover {
-      background: #000;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
+      min-height: 100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .container {
+      max-width:400px;
+      width:100%;
+      background: rgba(0,0,0,0.6);
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+      box-shadow:0 8px 25px rgba(0,0,0,0.6);
+    }
+
+    .profile-img {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      border:3px solid #00f7ff;
+      object-fit:cover;
+      margin-bottom:15px;
+    }
+
+    h1 {
+      font-size:1.6rem;
+      margin-bottom:8px;
+    }
+
+    p {
+      font-size:0.95rem;
+      color:#ddd;
+      margin-bottom:20px;
+    }
+
+    .link {
+      display:block;
+      text-decoration:none;
+      margin:12px 0;
+      padding:14px;
+      border-radius:12px;
+      font-weight:600;
+      color:#fff;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      box-shadow:0 4px 15px rgba(0, 150, 255, 0.4);
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+
+    .link:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow:0 6px 20px rgba(0,150,255,0.6);
+    }
+
+    footer {
+      margin-top:20px;
+      font-size:0.8rem;
+      color:#aaa;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Profile Image -->
+    <img src="https://photos.app.goo.gl/bTfzHmAhwuqyE3527" alt="Profile" class="profile-img">
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- Name + Bio -->
+    <h1>Abdul Pathan</h1>
+    <p>Web Developer | Creator | Gamer 🎮</p>
 
-  <div class="container" id="home">
-    <h1><span class="typewriter"></span></h1>
-    <img src="IMG_4860[1].jpg" alt="Abdul's Photo" class="profile-pic">
-    <p><strong>Name:</strong> Abdul</p>
-    <div class="buttons">
-      <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">Instagram</a>
-      <a href="https://wa.me/919016061182" target="_blank">WhatsApp</a>
-      <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">Snapchat</a>
-    </div>
+    <!-- Links -->
+    <a href="https://www.instagram.com/iam_abdul_0718" class="link" target="_blank">🌐 Instagram</a>
+    <a href="https://wa.me/919016061182" class="link" target="_blank">💬 WhatsApp</a>
+    <a href="https://www.snapchat.com/add/pathan_0718" class="link" target="_blank">👻 Snapchat</a>
+    <a href="https://pathanabdul0718.github.io/myfirstwebsite/" class="link" target="_blank">💻 My Website</a>
+    <a href="https://www.youtube.com/" class="link" target="_blank">▶️ YouTube</a>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Abdul Pathan
+    </footer>
   </div>
-
-  <div class="container" id="about">
-    <h2>About Abdul</h2>
-    <p>Hey! I'm Abdul, a passionate guy from India who just started exploring the world of web development. I love learning new skills and building cool websites like this one!</p>
-  </div>
-
-  <div class="container" id="gallery">
-    <h2>Gallery</h2>
-    <img src="IMG_4860[1].jpg" alt="Gallery Photo 1" class="profile-pic">
-  </div>
-
-  <div class="container" id="contact">
-    <h2>Contact Abdul</h2>
-    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/iam_abdul_0718?igsh=eDdrZmUwdGR2dXI3" target="_blank">@iam_abdul_0718</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919016061182" target="_blank">+91 9016061182</a></p>
-    <p><strong>Snapchat:</strong> <a href="https://www.snapchat.com/add/pathan_0718?share_id=IzbDlfo0E8c&locale=en-IN" target="_blank">pathan_0718</a></p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Abdul. Designed with love.</p>
-  </footer>
-
-  <script>
-    const txt = "Welcome to Abdul's Page";
-    let i = 0;
-    const speed = 100;
-    function typeWriter() {
-      if (i < txt.length) {
-        document.querySelector(".typewriter").textContent += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    window.onload = typeWriter;
-  </script>
-
 </body>
 </html>
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Abdul Pathan's Website">
-<meta property="og:description" content="Explore Abdul Pathan's portfolio, skills, and projects.">
-<meta property="og:image" content="https://github.com/pathan0718/myfirstwebsite/blob/main/IMG_4860%5B1%5D.jpg?raw=true>
-<meta property="og:url" content="https://pathan0718.github.io/myfirstwebsite/">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Abdul Pathan's Website">
-<meta name="twitter:description" content="Explore Abdul Pathan's portfolio, skills, and projects.">
-<meta name="twitter:image" content="https://github.com/pathan0718/myfirstwebsite/blob/main/IMG_4860%5B1%5D.jpg?raw=true
